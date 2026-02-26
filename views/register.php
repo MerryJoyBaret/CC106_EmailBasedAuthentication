@@ -16,3 +16,4 @@ include 'templates/header.php';
 </form>
 <p>Already have an account? <a href="/php-email-auth/index.php?action=login">Login here</a>.</p>
 <?php include 'templates/footer.php'; ?>
+

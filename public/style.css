@@ -66,9 +66,16 @@ main {
 
 h1 {
     text-align: center;
-    color: #667eea;
+    color: #000105;
     margin-bottom: 1.5rem;
     font-size: 2rem;
+}
+
+h2 {
+    text-align: center;
+    color: #667eea;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
 }
 
 p {

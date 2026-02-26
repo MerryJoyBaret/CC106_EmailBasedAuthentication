@@ -1,6 +1,5 @@
 <?php
 require_once __DIR__ . '/../models/User.php';
-session_start();
 class AuthController {
  private $userModel;
  public function __construct($conn) {
@@ -22,6 +21,7 @@ class AuthController {
  $result = $this->userModel->login($email, $password);
  if (is_array($result)) {
  $_SESSION['user'] = $result['email'];
+ $_SESSION['name'] = isset($result['name']) ? $result['name'] : $result['email'];
  header("Location: index.php?action=home&loggedin=1");
  exit();
  }

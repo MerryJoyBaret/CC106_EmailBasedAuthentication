@@ -1,4 +1,11 @@
 <?php
+session_start();
+
+// Prevent caching of redirects and dynamic content
+header('Cache-Control: no-cache, no-store, must-revalidate, max-age=0');
+header('Pragma: no-cache');
+header('Expires: 0');
+
 require_once 'config/db.php';
 require_once 'controllers/AuthController.php';
 $auth = new AuthController($conn);
